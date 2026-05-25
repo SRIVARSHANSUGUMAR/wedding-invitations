@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    color:white;
+    background:#000;
+}
+
+.hero{
+    min-height:100vh;
+    width:100%;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:url('background.jpg') center center/cover no-repeat;
+    filter:brightness(0.45);
+    transform:scale(1.08);
+    animation:zoomBg 15s infinite alternate ease-in-out;
+}
+
+@keyframes zoomBg{
+    from{transform:scale(1.05);}
+    to{transform:scale(1.15);}
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(0,0,0,0.75));
+}
+
+.content{
+    position:relative;
+    z-index:2;
+    width:90%;
+    max-width:850px;
+    animation:fadeUp 2s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+
+.top-couple{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:180px;
+    z-index:5;
+    animation:float 4s infinite ease-in-out;
+    filter:drop-shadow(0px 10px 20px rgba(0,0,0,0.5));
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0px);}
+}
+
+.invite{
+    font-size:22px;
+    letter-spacing:5px;
+    margin-bottom:20px;
+    color:#ffd700;
+}
+
+.main-title{
+    font-size:65px;
+    font-weight:700;
+    margin-bottom:10px;
+    text-shadow:0px 0px 25px rgba(255,215,0,0.7);
+}
+
+.names{
+    font-size:38px;
+    line-height:1.6;
+    margin-top:20px;
+    font-weight:600;
+}
+
+.and{
+    color:#ffd700;
+    font-size:40px;
+}
+
+.details{
+    margin-top:35px;
+    font-size:20px;
+    line-height:2;
+    background:rgba(255,255,255,0.12);
+    padding:30px;
+    border-radius:25px;
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0px 10px 35px rgba(0,0,0,0.5);
+}
+
+.highlight{
+    color:#ffd700;
+    font-weight:700;
+}
+
+.qr-box{
+    margin-top:40px;
+}
+
+.qr-box img{
+    width:180px;
+    border-radius:20px;
+    border:4px solid white;
+    box-shadow:0px 0px 30px rgba(255,255,255,0.4);
+}
+
+.qr-text{
+    margin-top:15px;
+    font-size:18px;
+}
+
+.blessing{
+    margin-top:40px;
+    font-size:22px;
+    color:#ffe082;
+}
+
+.hearts{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    top:0;
+    left:0;
+    z-index:1;
+}
+
+.hearts span{
+    position:absolute;
+    display:block;
+    color:rgba(255,255,255,0.5);
+    animation:animate 10s linear infinite;
+    bottom:-150px;
+    font-size:24px;
+}
+
+@keyframes animate{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+    10%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111;
+    font-size:15px;
+    color:#bbb;
+}
+
+@media(max-width:768px){
+
+    .main-title{
+        font-size:42px;
+    }
+
+    .names{
+        font-size:28px;
+    }
+
+    .details{
+        font-size:17px;
+        padding:20px;
+    }
+
+    .top-couple{
+        width:120px;
+    }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<div class="hearts">
+    <span style="left:5%;animation-delay:0s;">❤</span>
+    <span style="left:15%;animation-delay:2s;">❤</span>
+    <span style="left:30%;animation-delay:5s;">❤</span>
+    <span style="left:45%;animation-delay:1s;">❤</span>
+    <span style="left:60%;animation-delay:3s;">❤</span>
+    <span style="left:75%;animation-delay:6s;">❤</span>
+    <span style="left:90%;animation-delay:4s;">❤</span>
+</div>
+
+<img src="couple.png" class="top-couple" alt="Couple Image">
+
+<div class="content">
+
+<div class="invite">WEDDING INVITATION</div>
+
+<h1 class="main-title">You Are Invited</h1>
+
+<div class="names">
+    M. Jayarthanan
+    <div class="and">&</div>
+    N. Renuka
+</div>
+
+<div class="details">
+
+<p>With the blessings of our parents and elders,</p>
+<p>we cordially invite you and your family</p>
+<p>to grace the wedding ceremony and bless the couple.</p>
+
+<br>
+
+<p><span class="highlight">Wedding Date:</span> Thursday, 04 June 2026</p>
+
+<p><span class="highlight">Muhurtham Time:</span> 7:30 AM to 9:00 AM</p>
+
+<p><span class="highlight">Venue:</span></p>
+
+<p>ANS Marriage Hall</p>
+<p>Salem Main Road</p>
+<p>Tamil Nadu, India</p>
+
+<div class="qr-box">
+    <img src="qr.png" alt="QR Code">
+    <div class="qr-text">
+        Scan the QR code for Marriage Hall Location
+    </div>
+</div>
+
+<div class="blessing">
+    Your presence and blessings mean a lot to us ❤
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+Designed with Love for Wedding Celebration
+</footer>
+
+</body>
+</html>
